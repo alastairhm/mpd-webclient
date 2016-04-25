@@ -1,0 +1,13 @@
+myicecast:
+   image: alastairhm/docker-icecast
+   volumes:
+      - /home/alastair/music/:/opt/music
+   ports:
+      - "8000:8000"
+      - "6600:6600"
+piwigo:
+   image: alastairhm/icecast-frontend
+   links:
+      - myicecast:icy 
+   ports:
+      - "80:80"
