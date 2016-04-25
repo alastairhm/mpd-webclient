@@ -6,7 +6,7 @@ myicecast:
       - "8000:8000"
       - "6600:6600"
 frontend:
-   build : alastairhm/mpd-webclient
+   image : alastairhm/mpd-webclient
    links:
       - myicecast:icy 
    ports:

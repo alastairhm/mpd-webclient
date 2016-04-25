@@ -27,7 +27,7 @@ RUN apk --update add \
 
 ADD lighttpd.conf /etc/lighttpd/lighttpd.conf
 RUN mkdir -p /var/www2 && \
-    git clone https://github.com/sn0opy/MPD-Webinterface.git && \
+    git clone https://github.com/sn0opy/mpdinterface2.git && \
     mv MPD-Webinterface/* /var/www2/ && \
     chown -R www-data. /var/www2/* && \
     rm -rf MPD* && \
