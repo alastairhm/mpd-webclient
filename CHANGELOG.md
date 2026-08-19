@@ -10,6 +10,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - `CLAUDE.md` documenting the repo for Claude Code.
 
+### Fixed
+
+- Pinned the base image to `alastairhm/alpine-lighttpd:3.3` (was `:latest`). The
+  `:latest` tag now resolves to a current Alpine release whose repos no longer carry
+  `php-mcrypt` and `php-xmlrpc` (both dropped from Alpine after PHP moved on from
+  bundling mcrypt/XML-RPC), so the build failed outright. `3.3` matches the PHP 5.6
+  package set the Dockerfile was originally written against.
+
 ## [1.0.0] - 2016-04-25
 
 ### Added
