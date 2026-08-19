@@ -4,3 +4,5 @@ Using https://github.com/sn0opy/MPD-Webinterface as the web client
 
 See example Docker compose file.
 
+See [CHANGELOG.md](CHANGELOG.md) for release history.
+
